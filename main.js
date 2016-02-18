@@ -40,10 +40,7 @@ document.querySelector("#blow-up button").addEventListener('click',function(){
   	//	circleSize.width = "40px"
   	//	circleSize.height = "40px"
   //}
-  if (oldWidth >= 320) {
-      oldWidth = 40
-      oldHeight = 40
-  }
+  
 })
 
 document.querySelector("#remove button").addEventListener('click',function(){
