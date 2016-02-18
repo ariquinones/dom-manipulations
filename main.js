@@ -99,19 +99,18 @@ document.querySelector("#pig-latin button").addEventListener('click',function(){
 
 document.querySelector("#cycle-image button").addEventListener('click',function(){
   // TASK #8
-  var imgSource = document.getElementById("city-img").src 
+  var imgSource = document.getElementById("city-img") 
   //imgSource = (imgSource.substr(0, imgSource.length -1))
   console.log(imgSource)
-  var newSource = imgSource.split("/")
-  console.log(newSource)
-  var oldNum = imgSource.pop() 
-  console.log(oldNum)
+  var newSource = imgSource.src.split("/")
+  //console.log(newSource)
+  var oldNum = newSource.pop()
+  //console.log(oldNum)
   var newNum = parseInt(oldNum) + 1 
-  console.log(newNum)
-  var finalSource = newSource + newNum 
-  console.log(finalSource)
-  //imgSource.src = "http://lorempixel.com/400/200/city/" + clicks
-
+  //console.log(newNum)
+  newSource.push(newNum)
+  var finalSource = newSource.join('/')
+  imgSource.src = finalSource
 })
 
 
