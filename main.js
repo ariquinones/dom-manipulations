@@ -30,11 +30,19 @@ document.querySelector("#blow-up button").addEventListener('click',function(){
   var circleSize = window.getComputedStyle(circle)
   var oldWidth = parseInt(circleSize.width)
   var oldHeight = parseInt(circleSize.height)
+    if (oldWidth >= 320) {
+      oldWidth = 40
+      oldHeight = 40
+  }
   circle.style.width = (oldWidth*2) + "px"
   circle.style.height = (oldHeight*2) + "px"
-  if (circle.style.width >= "320px") {
-  		circleSize.width = "40px"
-  		circleSize.height = "40px"
+  //if (circle.style.width >= "320px") {
+  	//	circleSize.width = "40px"
+  	//	circleSize.height = "40px"
+  //}
+  if (oldWidth >= 320) {
+      oldWidth = 40
+      oldHeight = 40
   }
 })
 
@@ -108,6 +116,9 @@ document.querySelector("#cycle-image button").addEventListener('click',function(
   //console.log(oldNum)
   var newNum = parseInt(oldNum) + 1 
   //console.log(newNum)
+  if (newNum >= 10) {
+    newNum = 1
+  }
   newSource.push(newNum)
   var finalSource = newSource.join('/')
   imgSource.src = finalSource
