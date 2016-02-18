@@ -1,4 +1,3 @@
-console.log('hi')
 document.querySelector("#thanks button").addEventListener('click',function(){
   // TASK #1
   alert("yowch! don't click me so hard!")
